@@ -1,0 +1,17 @@
+<div class="container">
+    <h3 class="header">Qrcode Generator</h3>
+    <div class="itemForm">
+        <form [formGroup]="itemGroup">
+            <input placeholder="Enter Item Name" class="inp" formControlName="itemName">
+            <button class="btn" (click)="addItem()">Add</button>
+        </form>
+    </div>
+
+
+    <div class="listContainer">
+        <div *ngFor="let item of data">
+            <p>Item Name : {{item.itemName}}</p>
+            <img [src]="item.qrcodeUrl" f>
+        </div>
+    </div>
+</div>
